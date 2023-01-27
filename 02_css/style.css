@@ -1,0 +1,19 @@
+@import url("./heading-style.css");
+
+
+/*주석*/
+
+h3 {
+ color: white;
+ background-color: black;
+}
+
+span {
+  color: blue;
+  background-color: orange;
+}
+
+p {
+  color: white;
+  background-color: red;
+}
