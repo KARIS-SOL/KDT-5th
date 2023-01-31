@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+
+  .parent {
+    font-size: 2rem;
+  }
+  .child {
+    font-size: 2rem;
+  }  
+  div {
+      line-height: 2; /*배수로써확인, em 으로가면 부모의 폰트사이즈 대한 배수가된다*/
+    }
+  </style>
+</head>
+<body>   
+  <div class="parent">
+    parent
+    <div class="child">
+      child
+    </div>
+  </div>
+  
+</body>
+</html>
