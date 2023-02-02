@@ -7,22 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    div {
-      width: 200px;
-      height: 200ox;
+    body {
       background-color: orange;
-      visibility: visible;
     }
 
-    /
+    @media screen and (max-width: 500px) {
+      body {
+        background-color: skyblue;
+      }
+    }
+
+    @media screen and (max-height: 300px) {
+      body {
+        background-color: tomato;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div>
-
-  </div>
-
 
 </body>
 
