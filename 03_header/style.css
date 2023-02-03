@@ -1,0 +1,125 @@
+/*common*/
+body {}
+a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+/*block*/
+header {
+  display: flex;
+  justify-content: center; /*가운데 정렬*/
+ 
+  box-shadow: 0 2px 4px 0 rgba(207, 207, 207, 0.5);  /*밑줄 그림자처럼 주기 */
+}
+header .inner {
+  display: flex;
+  width: 1200px; /*위치고정사이즈 , 인프런사이즈랑 똑같이한것 */
+  height: 64px;
+  padding: 0 32px; /*검사창으로 확인해보기*/
+  justify-content: space-between; /*양쪽으로 붙고 가운데는 알아서 정렬됨 */
+  align-items: center; /*그안에 있는 글씨들은 수직으로 정렬임 */
+  
+}
+
+/*logo파트*/
+header .inner .header__logo {
+  font-size: 32px; /*상위에서 선언을 하면 밑에 자식태그들이 다영향을 받음 색은 영향을 안받음 */
+  /*높이 값이 있기때문에 자동 중앙정렬이됨 */
+  flex-shrink: 0; /*사이트 사이즈 줄였을때 글씨 그대로 유지*/
+}
+header .inner .header__logo a {
+  font-family: 'Gamja Flower', cursive;
+  color: green;
+  
+}
+header .inner .header__logo a i {}
+
+/*menu파트*/
+header .inner .header__menu {
+  display: flex; /*가로로변경 */
+  font-size: 16px;
+  height: 32px; /* width 는 알아서 글자에 맞춰서 움직이게 */
+  flex-shrink: 0; /*사이트 사이즈 줄였을때 글씨 그대로 유지*/
+  margin-left: 20px;
+ }
+
+header .inner .header__menu li { /*글씨 16에 높이 32이니깐 padding 8주면 중앙정렬되는 느낌도 받을 수 있음  */
+  padding: 8px 16px;
+  /*line-height: 32px; 한 줄 중앙정렬을 계산해서 padding 을 써도 됨*/
+
+}
+header .inner .header__menu li a:hover {
+    color: #1dc078;
+  }
+
+
+/*공간파트*/
+header .inner .header__space {
+  flex-grow: 1; /*다른것들은 grow 값이 0 */
+  }
+
+/* 검색파트 */
+header .inner .header__search {
+  position: relative;
+  height: 34px;
+  flex-shrink: 0;
+  margin-right: 30px;
+  }
+header .inner .header__search input {
+  box-sizing: border-box; 
+  width: 148px;
+  height: 34px;
+  padding: 5px 9px; /*커서포인트위치변경 벽에서 딱 안붙게 */
+  font-size: 16px;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  border: none; /*기본상태일때 보더없었음 */
+  color: #4a4a4a; /*메뉴글씨랑 맞춰줘야 깔끔함 */
+  }
+
+header .inner .header__search input:hover {
+  border: 1px solid #c8c8c8;
+  }
+
+header .inner .header__search input:focus {
+  border: 1px solid #c8c8c8;
+  outline-color: #1dc078;
+  /*outline: none;
+  box-shadow: inset 0px 0px 0 2px; (안쪽으로 ) - outline-color 이랑 비슷한것 */ 
+} 
+header .inner .header__search i{
+  /*i의 부모요소인 search 에 위치값을 주자 */
+  /*transform: translateX(-30px);  돋보기가 안으로 들어가있는건 맞지만, 눈에 보이게만 들어가있는것, 실제로는 박스안에 들어가야함 */
+  position: absolute; /* 떠있는거니깐 자기자신의 위치를 잃었음 , 검사에서 포지션 색 보면됨 */
+  right: 9px; /*search칸(부모) 창에 padding 9만큼 준 느낌 */
+  margin: auto; /* 중앙정렬 브라우저가 계산할 수 있는 부모요소의 크기와 자신의 크기(폰트16)를 알아야함 */
+  height: 16px;
+  top: 0;
+  bottom: 0; /*top 과 bottom 으로 수직 중앙정렬, 수평으로 주려면 left , right 값에 주면됨 */
+}
+
+/*로그인 회원가입파트*/
+header .inner .header__login-join{
+  display: flex;
+  height: 34px;
+  gap: 10px; /*버튼 공간 사이 = margin 쓰는 것과 같음*/
+  flex-shrink: 0; /*사이트 사이즈 줄였을때 글씨 그대로 유지*/
+}
+header .inner .header__login-join .btn{
+  height: 34px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer; 
+}
+header .inner .header__login-join .btn.btn--login{
+  color: #4a4a4a;
+  background-color: white;
+}
+header .inner .header__login-join .btn.btn--join{
+  color: white;
+  background-color: #f77867;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--resetcss-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+  <!--fontawesome-->
+
+  <script src="https://kit.fontawesome.com/7090071867.js" crossorigin="anonymous"></script>
+  <!--googlefont-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Hi+Melody&family=Single+Day&display=swap"
+    rel="stylesheet">
+  <!--stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <header> <!--이름만다른 div태그라고 생각 -->
+    <div class="inner">
+      <!-- 로고파트 -->
+      <div class="header__logo">
+        <a href="#"><i class="fa-brands fa-envira"></i></a> <!--#은 자기페이지에서 열림 / 로고 사이즈는 폰트로 들어가기때문에 font-size로 해야함 -->
+        <a href="#">Inflearn</a>
+      </div>
+
+      <!-- 메뉴파트 -->
+      <ul class="header__menu">
+        <li><a href="#">강의</a></li>
+        <li><a href="#">로드맵</a></li>
+        <li><a href="#">멘토링</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="#">인프런</a></li>
+      </ul>
+
+      <!-- 공간파트 사이트사이즈 줄일때 가운데만 줄어드는 부분 -->
+      <div class="header__space"></div>
+
+      <!-- 검색파트 -->
+      <div class="header__search">
+        <input type="text" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- 로그인, 회원가입 파트 -->
+      <div class="header__login-join"> <!--보통이름지을때는 한개 그래서 언더바 두개로 구분을 지음(언더바는 클릭하면 한번에 선택되고 하이픈은 따로 선택이되서)-->
+        <div class="btn btn--login">로그인</div>
+        <div class="btn btn--join">회원가입</div>
+      </div>
+    </div>
+  </header>
+
+</body>
+
+</html>
