@@ -40,7 +40,7 @@ header .inner .header__menu {
   display: flex; /*가로로변경 */
   font-size: 16px;
   height: 32px; /* width 는 알아서 글자에 맞춰서 움직이게 */
-  flex-shrink: 0; /*사이트 사이즈 줄였을때 글씨 그대로 유지*/
+  flex-shrink: 0; /*사이트 사이즈 줄였을때 글씨 그대로 유지 (여기서 1을 주면 flex container 너비에 따라 감소비율 적용 */
   margin-left: 20px;
  }
 
@@ -56,14 +56,14 @@ header .inner .header__menu li a:hover {
 
 /*공간파트*/
 header .inner .header__space {
-  flex-grow: 1; /*다른것들은 grow 값이 0 */
+  flex-grow: 1; /*다른것들은 grow 값이 0 flex item의 증가 너비비율, 비율 에 맞춰서 다른것들이 맞춰짐. 반응형 */
   }
 
 /* 검색파트 */
 header .inner .header__search {
   position: relative;
   height: 34px;
-  flex-shrink: 0;
+  flex-shrink: 0; /*반응형 : 디자인이 깨지면 안되니깐 */
   margin-right: 30px;
   }
 header .inner .header__search input {
@@ -93,7 +93,7 @@ header .inner .header__search i{
   /*transform: translateX(-30px);  돋보기가 안으로 들어가있는건 맞지만, 눈에 보이게만 들어가있는것, 실제로는 박스안에 들어가야함 */
   position: absolute; /* 떠있는거니깐 자기자신의 위치를 잃었음 , 검사에서 포지션 색 보면됨 */
   right: 9px; /*search칸(부모) 창에 padding 9만큼 준 느낌 */
-  margin: auto; /* 중앙정렬 브라우저가 계산할 수 있는 부모요소의 크기와 자신의 크기(폰트16)를 알아야함 */
+  margin: auto; /* 수직중앙정렬 브라우저가 계산할 수 있는 부모요소(기준)의 크기와 자신의 크기(폰트16)를 알아야함 */
   height: 16px;
   top: 0;
   bottom: 0; /*top 과 bottom 으로 수직 중앙정렬, 수평으로 주려면 left , right 값에 주면됨 */
