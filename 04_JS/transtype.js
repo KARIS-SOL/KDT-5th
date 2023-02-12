@@ -1,12 +1,23 @@
-/*let str = "124";
-console.log(typeof str);
-console.log(str / 2);
+// Test 1 
 
-let num = Number(str);
-console.log(typeof num);
-console.log(num / 2); */
+// let str = "124";
+// console.log(typeof str);
+// console.log(str / 2);
 
-//console.log(Number('abcd'));
+// let num = Number(str);
+// console.log(typeof num);
+// console.log(num / 2); 
+
+// console.log(Number('abcd'));
+
+// test.js:2 string
+// test.js:3 62
+// test.js:6 number
+// test.js:7 62
+// test.js:9 NaN
+
+
+
 
 /*let num = 123;
 let num2 = 456;
@@ -27,7 +38,7 @@ let avg = (num + num2) / 2;
 
 console.log(avg); */
 
-let mathScoreStr = prompt("수학점수를 입력하세요");
+let mathScoreStr = prompt("수학점수를 입력하세요"); 
 let engScoreStr = prompt("영어점수");
 
 let mathScornum = Number(mathScoreStr);

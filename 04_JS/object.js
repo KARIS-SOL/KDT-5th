@@ -15,3 +15,12 @@ console.log(karis.isMarried);
 console.log(karis.hobby);
 console.log(karis.brain);
 console.log(karis.husband);
+
+
+// 백진솔
+// 34
+// true
+// false
+// Drink Bondee Climbing Swimming
+// null
+// undefined 

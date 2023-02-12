@@ -1,7 +1,6 @@
-let num = 123;
+let number = 123;
 let opacity = 0.7;
 
-console.log(num);
+console.log(number);
 console.log(opacity);
-
-console.log(num * opacity);
+console.log(number * opacity);
