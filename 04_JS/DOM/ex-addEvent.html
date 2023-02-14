@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .orange {
+      background-color: orange;
+    }
+
+    .skyblue {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1" onclick="checkColor()">1</div>
+  <div class="box2">2</div>
+</body>
+<script>
+  const boxOne = document.querySelector(".box1");
+  const boxTwo = document.querySelector(".box2");
+
+
+  function checkColor() {
+    if (boxOne.classList.contains("orange")) {
+      boxOne.classList.remove("orange");
+      boxOne.classList.add("skyblue");
+    } else if (boxOne.classList.contains("skyblue")) {
+      boxOne.classList.remove("skyblue");
+      boxOne.classList.add("orange");
+    } else {
+      boxOne.classList.add("orange")
+    }
+  }
+
+  function checkColor2() {
+    if (boxTwo.classList.contains("orange")) {
+      boxTwo.classList.remove("orange");
+      boxTwo.classList.add("skyblue");
+    } else if (boxTwo.classList.contains("skyblue")) {
+      boxTwo.classList.remove("skyblue");
+      boxTwo.classList.add("orange");
+    } else {
+      boxTwo.classList.add("orange")
+    }
+  }
+  boxTwo.addEventListener("click", checkColor2);
+
+  //  boxTwo.addEventListener("click", function () {
+  //   if (boxTwo.classList.contains("orange")) {
+  //     boxTwo.classList.remove("orange");
+  //     boxTwo.classList.add("skyblue");
+  //   } else if (boxTwo.classList.contains("skyblue")) {
+  //     boxTwo.classList.remove("skyblue");
+  //     boxTwo.classList.add("orange");
+  //   } else {
+  //     boxTwo.classList.add("orange")
+  //   }
+  // })
+</script>
+
+</html>
