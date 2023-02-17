@@ -8,7 +8,7 @@ function solution(num) {
     if (i % 2 === 1) answer.push(i);
   }
 
-
+   
   return answer;
 }
 

@@ -24,7 +24,7 @@ function calendarTask(e) {
   }
 }
 
-// 4. onclick 함수 구현
+// 4. onclick 함수 구현//
 function writeSchedule() {
   // 6. 내용을 입력하지 않고 작성버튼 누르면 안내문구 띄우기
   if (input.value === "" && date.value === "") {

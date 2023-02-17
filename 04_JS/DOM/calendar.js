@@ -14,7 +14,7 @@ function calendarTask(e) {
     date.value = `2023년 2월 ${e.target.textContent}일`; //text 값을 value 값을 넣어주세요 
     targetEl = e.target.parentNode;
     //console.log("parent", e.target.parentNode); // td 의 위치는 p 태그의 부모
-  } else if (e.target.tagName === "TD") { //숫자가 아니라 그옆공간이여도 디게끔
+  } else if (e.target.tagName === "TD") { //숫자가 아니라 그옆공간이여도 될 수 있게
     const day = e.target.children[0].textContent // childNode 를 안쓰는 이유는 우리가 필요한 text외의 것들도 따라올까봐 
     date.value = `2023년 2월 ${day}일`;
     //console.log(e.target.children[0]);  //p태그의 접근이나 배열을 알게하기 위해서 확인해볼것, 해당공간에서 p 태그를 골라오려고
