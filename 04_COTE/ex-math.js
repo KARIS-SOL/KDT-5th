@@ -30,9 +30,9 @@
 
 //3번 :  0 ~ 100 까지의 숫자 중에서 랜덤한 정수가 나오도록 만들기
 
-console.log(Math.ceil(Math.random() * 100));
+console.log(Math.ceil(Math.random() * 100));  // 결론이 앞으로 나오고 과정이 뒤로 
 
-// 결론이 앞으로 나오고 과정이 뒤로 
+
 
 
 
