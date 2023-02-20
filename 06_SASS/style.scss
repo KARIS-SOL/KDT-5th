@@ -1,0 +1,110 @@
+@import "reset"; 
+@import "mixin";
+
+//변수 
+$body-bg: #111;
+$wrap-border: #ddd;
+$wrap__item-bg: #222;
+$wrap__item_h2: #333;
+$wrap__item_p: #777;
+$btn-bg: orange;
+$btn-font: white;
+$wrap__item-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+
+
+//Main
+body {
+  background-color: $body-bg;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  width : 100%;
+  padding: 100px;
+  border: 2px solid $wrap-border;
+  perspective: 600px; //z축에서 보는거 
+
+  &:hover { //wrap 에 호버가 일어나면 item에 있는 부분을 변경하겠다
+    .item {
+      transform: translateY(0px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+.item {
+    width: 300px;
+    padding: 30px;
+    background-color: $wrap__item-bg;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: $wrap__item-shadow;
+    transform: translateY(100px) rotateY(180deg);
+    transition: 0.6s;
+    opacity: 0;
+
+    // &:nth-child(1) {
+    //   transition-delay: .1s;
+    // }
+    // &:nth-child(2) {
+    //   transition-delay: .2s;
+    // }
+    // &:nth-child(3) {
+    //   transition-delay: .3s;
+    // }
+    // &:nth-child(3) {
+    //   transition-delay: .4s;
+    // }
+
+
+    //   //for 문으로 바꾸기
+    $interval: 0.3s; //정석상 맨위에 붙혀놓는게 맞지만 편리함을 위해서 for문위에 정리해놓은것.
+    @for $i from 1 to 5 { //to는 1-4 까지 , through 는 1-5 까지 
+      &:nth-child(#{$i}) { //숫자를 쓰고싶다면 '#'
+        transition-delay: $interval * $i;
+      }
+    }
+
+
+    // &:hover { //&자기자신 nesting 을 한 (.item)
+    //   background-color: coral;
+    // }
+
+  h2 {
+      font: bold 30px/1 "arial";
+      margin-bottom: 20px;
+      @if $wrap__item-bg == #fff {
+        color: $wrap__item_h2;
+      } @else {
+        color: white;
+      }
+      // color: $wrap__item_h2;
+    }
+
+   p {
+        font: normal 16px/1.5 "arial";
+        @if $wrap__item-bg == #fff {
+          color: $wrap__item_p;
+        } @else {
+          color: white;
+        }
+
+        // color: $wrap__item_p;
+    
+    }
+
+      $bgColors: (orange, hotpink, aqua, lightgreen);
+      @each $el in $bgColors {
+        $index: index($list: $bgColors, $value:$el );
+        &:nth-child(#{$index}) {
+            transition-delay: $interval * $index;
+          a { /*인라인요소는 사이즈안먹어서 display 로 시작 */
+            @include button($bg-color: $el);
+         }
+        }
+      }
+
+
+  
+  }
+}

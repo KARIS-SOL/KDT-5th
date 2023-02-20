@@ -1,0 +1,15 @@
+// Reset CSS , 앞에 _를 붙힌 파일이름은 우리가 구분을 하가 위한 파일 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
