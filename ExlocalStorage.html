@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.localStorage.clear(); // Sychronous vs Asychronous 차이때문에 순서가 달라질 수 있으므로 clear 먼저! 
+    window.localStorage.setItem("pororo", "뽀로로");
+    window.localStorage.setItem("hobby", "취미");
+    window.localStorage.setItem("age", "나이");
+    window.localStorage.setItem("bike", "자전거");
+    window.localStorage.setItem("gender", "성별");
+
+    for (let i = 0; i < window.localStorage.length; i++) {
+      const key = window.localStorage.key(i);
+      const value = window.localStorage.getItem(key);
+      console.log(`${key}는 한국어로 ${value}이다`);
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
