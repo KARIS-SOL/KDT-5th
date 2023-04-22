@@ -19,3 +19,15 @@ function solution(numbers) {
   
   return answer;
 }
+
+
+let isAdult = true;
+let isVip = false;
+let isDrunken = true;
+let hasMoney = true;
+
+if (((is Adult && isVip) && !isDrunken)|| hasMoney){
+  console.log("통과");
+} else {{
+  console.log("돌아가");
+}}
