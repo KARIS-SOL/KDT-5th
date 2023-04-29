@@ -70,4 +70,6 @@ let padding = '18.5%';
 parseInt(padding); //18
 parseFloat(padding); // 18.5
 
-
+// Math.random()  -> 0 -1 사이 무작위 숫자 생성
+// 만약, 1-100 사이 임의의 숫자를 뽑고 싶다면?
+Math.floor(Math.random()*100) +1   // 100을 곱한후 floor로 소수점 이하를 버린후 0.0001 이 나올 수 있으므로 +1 을해줌줌
