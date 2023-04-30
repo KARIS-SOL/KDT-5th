@@ -66,7 +66,7 @@ parseInt(redColor); // NaN 으로 반환 됨
 
 
 // parseFloat(); -> parseInt 와 같지만 소수점까지 반환
-let padding = '18.5%';
+let padding = '18.5%'
 parseInt(padding); //18
 parseFloat(padding); // 18.5
 
