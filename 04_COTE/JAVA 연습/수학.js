@@ -75,7 +75,15 @@ parseFloat(padding); // 18.5
 Math.floor(Math.random()*100) +1   // 100을 곱한후 floor로 소수점 이하를 버린후 0.0001 이 나올 수 있으므로 +1 을해줌줌
 
 
-//Math.ceil()  -> 임의적으로 나누고 싶은 숫자가 있을 때 적용 
-function solution(n) {
-  return Math.ceil(n/7);
-}
+//Math.max() / Math.min()  -> 말그대로 맥스와 미니멈
+Math.max(1,4,-1,5,10,9,5.54);
+Math.min(1,4,-1,5,10,9,5.54);
+
+//Math.abs() : 절대값
+Math.abs(-1)  // 1 
+
+//Math.pow(n,m) : 거듭제곱
+Math.pow(2, 10); // 1024 
+
+//Math.sqrt() : 제곱근
+Math.sqrt(16) //4
