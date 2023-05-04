@@ -59,3 +59,22 @@ hello.repeat(3); // "hello!hello!hello!"
 "a" < "c" // true
 "a".codePointAt(0); // 97
 String.fromCodePoint(97) // "a"
+
+
+//실전예제
+let list = [
+  "01. 들어가며",
+  "02. JS의 역사",
+  "03. 자료형",
+  "04. 함수",
+  "05. 배열",
+];
+
+let newList = [];
+
+for (let i = 0; i < list.length; i++) {
+  newList.push(list[i].slice(4));  //newList에 넣어준다 뭐를? list[i] 전체문자열 뜻하고, 거기서 4번째부터 끝까지 자르는것을 push 로 넣어주는것
+}
+console.log(newList);
+
+// ["들어가며", "JS의 역사", "자료형", "함수", "배열"]
